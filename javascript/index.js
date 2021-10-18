@@ -2916,3 +2916,16 @@ console.log(data[1]);  // ger andra tidsserien
 var weatherSize = Object.keys(data).length;
 
 console.log(weatherSize);  // ger antalet tidsserier
+
+let weatherNow = data[0].data.instant.details;
+
+console.log(weatherNow);
+
+let airP = weatherNow.air_pressure_at_sea_level;
+let temp = weatherNow.air_temperature;
+
+console.log(airP);
+console.log(temp);
+
+document.getElementById("airpressure").innerHTML = airP;
+document.getElementById("temp").innerHTML = temp;
