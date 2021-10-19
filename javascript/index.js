@@ -2918,14 +2918,52 @@ var weatherSize = Object.keys(data).length;
 console.log(weatherSize);  // ger antalet tidsserier
 
 let weatherNow = data[0].data.instant.details;
+let weather1H = data[1].data.instant.details;
 
 console.log(weatherNow);
+console.log(weather1H);
 
+let lat = geometry.coordinates[0];
+let long = geometry.coordinates[1];
+let height = geometry.coordinates[2];
+
+let prognosTime = data[0].time;
 let airP = weatherNow.air_pressure_at_sea_level;
-let temp = weatherNow.air_temperature;
+let temp = weatherNow.air_temperature + "&#176;";
 
-console.log(airP);
+let thisDate = prognosTime.slice(0, 10);
+let thisTime = prognosTime.slice(11, 19);
+
+
+console.log(thisDate);
+console.log(thisTime);
 console.log(temp);
 
+document.getElementById("lat").innerHTML = lat;
+document.getElementById("long").innerHTML = long;
+document.getElementById("height").innerHTML = height + " m.ö.h.";
+
+document.getElementById("tid").innerHTML = prognosTime;
 document.getElementById("airpressure").innerHTML = airP;
 document.getElementById("temp").innerHTML = temp;
+
+let nextHour = data[0].data.next_1_hours.details.precipitation_amount;
+let nextHourSum = data[0].data.next_1_hours.summary;
+let nextHourImg = nextHourSum.symbol_code + ".png";
+let imgSource = "img/png/" + nextHourImg;
+
+let sixHour = data[0].data.next_6_hours.details.precipitation_amount;
+let sixHourImg = data[0].data.next_6_hours.summary.symbol_code + ".png";
+let imgSource6 = "img/png/" + sixHourImg;
+
+let twelveHourImg = data[0].data.next_12_hours.summary.symbol_code + ".png";
+let imgSource12 = "img/png/" + twelveHourImg;
+
+console.log(nextHour);
+console.log(nextHourImg);
+
+document.getElementById("prognos_1h").innerHTML = nextHour + " mm";
+document.getElementById("bild_1h").innerHTML = "<img class='img-fluid' src=" +imgSource + " />";
+document.getElementById("prognos_6h").innerHTML = sixHour + " mm";
+document.getElementById("bild_6h").innerHTML = "<img class='img-fluid' src=" +imgSource6 + " />";
+document.getElementById("bild_12h").innerHTML = "<img class='img-fluid' src=" +imgSource12 + " />";
