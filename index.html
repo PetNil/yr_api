@@ -54,13 +54,18 @@
         </div>
       </div>
       <div class="row">
-        <div class="col col-xs-3">Tid för prognos: </div>
-        <div class="col col-xs-3" id="tid"></div>
+        <div class="col col-xs-4">Datum för prognos: </div>
+        <div class="col col-xs-2" id="datum"></div>
+        <div class="col col-xs-4"></div>
+      </div>
+      <div class="row">
+        <div class="col col-xs-4">Tid för prognos: </div>
+        <div class="col col-xs-2" id="tid"></div>
         <div class="col col-xs-6"></div>
       </div>
       <div>
         <div>
-          <table>
+          <table class="table caption-top">
             <caption>Väderdata</caption>
             <tr>
               <th>Typ</th>
@@ -110,6 +115,20 @@
               <td id="wSpeed"></td>
               <td>m/s</td>
               <td></td>
+            </tr>
+            <tr>
+              <td>Högsta temp</td>
+              <td></td>
+              <td id="hTemp"></td>
+              <td>celsius</td>
+              <td>kommande 24 timmar</td>
+            </tr>
+            <tr>
+              <td>Lägsta temp</td>
+              <td></td>
+              <td id="lTemp"></td>
+              <td>celsius</td>
+              <td>kommande 24 timmar</td>
             </tr>
 
           </table>
