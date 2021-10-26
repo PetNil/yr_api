@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -134,12 +135,12 @@
           </table>
         </div>
         <div class="row">
-          <h3>Väderutsikter</h3>    
+          <h3>Väderutsikter</h3>
           <div class="col col-xs-4">
-              <h4>närmsta timman</h4>
-              <p>Uppskattad regnmängd:</p>
-              <p id="prognos_1h"></p>
-              <div id="bild_1h"></div>
+            <h4>närmsta timman</h4>
+            <p>Uppskattad regnmängd:</p>
+            <p id="prognos_1h"></p>
+            <div id="bild_1h"></div>
           </div>
           <div class="col col-xs-4">
             <h4>om 6 timmar</h4>
@@ -164,7 +165,7 @@
   <!-- <script type="text/javascript" src="json/haga_121021.json"></script> -->
   <!-- <script type="application/json" src="json/haga_121021.json"></script> -->
   <script>
-/* 
+    /*
             var loadFile = function(event) {
             //var file = document.file("json/haga_121021.json");
             var file = "json/haga_121021.json";
@@ -175,28 +176,27 @@
   json = JSON.stringify(loadFile);
   var parsed_obj = JSON.parse(json);
   console.log(parsed_obj);  */ // output 'testing'
-/* let myRequest = new Request('json/haga_121021.json');
-console.log(myRequest);
-fetch(myRequest)
-.then(function(response) {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return response.blob();
-})
-//.then(response => json = response.json());
-.then(function(response) {
-    json = JSON.stringify(response);
-    
-  //let objectURL = URL.createObjectURL(response);
-  //myJSON.src = objectURL;
- 
-});
-console.log(json); // output 'testing' */
+    /* let myRequest = new Request('json/haga_121021.json');
+    console.log(myRequest);
+    fetch(myRequest)
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.blob();
+    })
+    //.then(response => json = response.json());
+    .then(function(response) {
+        json = JSON.stringify(response);
+
+      //let objectURL = URL.createObjectURL(response);
+      //myJSON.src = objectURL;
+
+    });
+    console.log(json); // output 'testing' */
     // var parsed_obj = JSON.parse(json);
     // console.log(parsed_obj); // output 'testing'
-  
-</script>
+  </script>
 
   <!-- <script>
       var json = [];
@@ -207,4 +207,5 @@ console.log(json); // output 'testing' */
 </script> -->
 
 </body>
+
 </html>
