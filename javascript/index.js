@@ -2930,6 +2930,8 @@ let height = geometry.coordinates[2];
 let prognosTime = data[0].time;
 let airP = weatherNow.air_pressure_at_sea_level;
 let temp = weatherNow.air_temperature + "&#176;";
+let direction = weatherNow.wind_from_direction;
+let wSpeed = weatherNow.wind_speed;
 
 let thisDate = prognosTime.slice(0, 10);
 let thisTime = prognosTime.slice(11, 19);
@@ -2946,6 +2948,8 @@ document.getElementById("height").innerHTML = height + " m.ö.h.";
 document.getElementById("tid").innerHTML = prognosTime;
 document.getElementById("airpressure").innerHTML = airP;
 document.getElementById("temp").innerHTML = temp;
+document.getElementById("direction").innerHTML = direction;
+document.getElementById("wSpeed").innerHTML = wSpeed;
 
 let nextHour = data[0].data.next_1_hours.details.precipitation_amount;
 let nextHourSum = data[0].data.next_1_hours.summary;
