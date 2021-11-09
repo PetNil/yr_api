@@ -193,19 +193,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\erics\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\erics\\studyProjects\\Fiktivt\\yr_api\\Backend\\Weather\\Weather\\Weather.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\source\\repos\\yr_api\\Backend\\Weather\\Weather\\Weather.csproj",
       "projectName": "Weather",
-      "projectPath": "C:\\Users\\erics\\studyProjects\\Fiktivt\\yr_api\\Backend\\Weather\\Weather\\Weather.csproj",
-      "packagesPath": "C:\\Users\\erics\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\erics\\studyProjects\\Fiktivt\\yr_api\\Backend\\Weather\\Weather\\obj\\",
+      "projectPath": "C:\\Users\\admin\\source\\repos\\yr_api\\Backend\\Weather\\Weather\\Weather.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\source\\repos\\yr_api\\Backend\\Weather\\Weather\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\erics\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -246,12 +246,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.4, 5.0.4]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -260,7 +254,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.3.21202.5\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
