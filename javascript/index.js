@@ -8648,21 +8648,9 @@ const wSpeed = weatherNow.wind_speed;
 
 
 const weatherArray = Object.entries(weatherNow);
-// Testar om det regnar
-// const doesItRain = weatherArray.find(key => key[0] === 'precipitation_amount');
-// // Sätter regn till 0
-// const arrayRain = ['precipitation_amount', 0];
-
-// let weatherArrayRain = [];
-// // Om det inte regnar så finns inte regn med och läggs då till med 0
-//   if (doesItRain === undefined) {
-//     weatherArrayRain = [...weatherArray, arrayRain];
-//   } else {
-//     weatherArrayRain = Object.assign({}, weatherArray);
-//   }
 
 // Tar bort molnighet som vi inte använder just nu
-const prognos = weatherArray.filter(w => !w.includes("cloud_area_fraction"));
+// const prognos = weatherArray.filter(w => !w.includes("cloud_area_fraction"));
 
 // console.log(prognos); 
 
@@ -8684,23 +8672,13 @@ document.getElementById("rain").innerHTML = rain;
 document.getElementById("hum").innerHTML = hum;
 document.getElementById("direction").innerHTML = direction;
 document.getElementById("wSpeed").innerHTML = wSpeed;
-// Test
-// Använder sig av key som id och placerar alla värden på rätt ställe
-// med en loop istället. För temp läggs grad-tecknet till
-const prognosValues = prognos.forEach((key, index) => {
-  // console.log(key[0], key[1], index);
-  if(key[0] === 'air_temperature') {
-    document.getElementById(key[0]).innerHTML = key[1] + "&#176;";
-  } else {
-    document.getElementById(key[0]).innerHTML = key[1];
-  }
-});
 
 
 document.getElementById("hTemp").innerHTML = airTemp[0] + "&#176;";
 document.getElementById("lTemp").innerHTML = airTemp[1] + "&#176;";
-document.getElementById("hTemp2").innerHTML = airTemp[0] + "&#176;";
-document.getElementById("lTemp2").innerHTML = airTemp[1] + "&#176;";
+
+// console.log(airTemp[0]);
+// console.log(airTemp[1]);
 
 const nextHour = data[0].data.next_1_hours.details.precipitation_amount;
 const nextHourSum = data[0].data.next_1_hours.summary;
@@ -8708,7 +8686,7 @@ const nextHourImg = nextHourSum.symbol_code + ".png";
 const imgSource = "img/png/" + nextHourImg;
 
 // Separat för regn eftersom den verkar ligga i nästa timma
-document.getElementById("precipitation_amount").innerHTML = nextHour;
+// document.getElementById("precipitation_amount").innerHTML = nextHour;
 
 const sixHour = data[0].data.next_6_hours.details.precipitation_amount;
 const sixHourImg = data[0].data.next_6_hours.summary.symbol_code + ".png";
@@ -8717,7 +8695,9 @@ const imgSource6 = "img/png/" + sixHourImg;
 const twelveHourImg = data[0].data.next_12_hours.summary.symbol_code + ".png";
 const imgSource12 = "img/png/" + twelveHourImg;
 
+console.log(data[0].data.next_6_hours);
 // console.log(nextHour);
+// console.log(nextHourSum);
 // console.log(nextHourImg);
 
 document.getElementById("prognos_1h").innerHTML = nextHour + " mm";
