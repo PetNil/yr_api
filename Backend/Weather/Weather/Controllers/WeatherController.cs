@@ -26,8 +26,8 @@ namespace Weather.Controllers
         [EnableCors("AllowOrigin")]
         public async Task<IActionResult> GetWeather()
         {
-            double longitude = 11;
-            double latitude = 57;
+            double longitude = 11.9659;
+            double latitude = 57.6984;
             HttpClient client = _clientFactory.CreateClient("API Client");
             client.DefaultRequestHeaders.Add(HeaderNames.UserAgent, "WeatherData");
 
