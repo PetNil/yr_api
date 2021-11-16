@@ -15,4 +15,9 @@ body > div {
 
 img {
     width: 50%;
+    height: auto;
 }
+/* #arrow {
+  max-width: 50%;
+  height: auto;
+} */

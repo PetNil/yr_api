@@ -28,6 +28,7 @@
 </head>
 
 <body>
+  <!-- <img id="arrow" src="img/png/arrow.png" alt=""> -->
   <!-- your content here... -->
   <div id="container">
     <div id="" class="container-fluid">
@@ -79,12 +80,14 @@
               <th>Data</th>
               <th>Enhet</th>
               <th>Info</th>
+              <th></th>
             </tr>
             <tr>
               <td>Lufttryck</td>
               <td></td>
               <td id="airpressure"></td>
               <td>hPa</td>
+              <td></td>
               <td></td>
             </tr>
             <tr>
@@ -93,12 +96,14 @@
               <td id="temp"></td>
               <td>celsius</td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               <td>Regn</td>
               <td></td>
               <td id="rain"></td>
               <td>mm</td>
+              <td></td>
               <td></td>
             </tr>
             <tr>
@@ -107,19 +112,22 @@
               <td id="hum"></td>
               <td>%</td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               <td>Vindriktning</td>
               <td></td>
               <td id="direction"></td>
               <td>grader</td>
-              <td></td>
+              <td id="compassRose"></td>
+              <td><img src="img/arrows/ssv.png" alt=""></td>
             </tr>
             <tr>
               <td>Vind</td>
               <td></td>
               <td id="wSpeed"></td>
               <td>m/s</td>
+              <td></td>
               <td></td>
             </tr>
             <tr>
@@ -128,6 +136,7 @@
               <td id="hTemp"></td>
               <td>celsius</td>
               <td>kommande 24 timmar</td>
+              <td></td>
             </tr>
             <tr>
               <td>Lägsta temp</td>
@@ -135,6 +144,7 @@
               <td id="lTemp"></td>
               <td>celsius</td>
               <td>kommande 24 timmar</td>
+              <td></td>
             </tr>
 
           </table>
@@ -237,6 +247,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="javascript/compassRose.js"></script>
   <script type="text/javascript" src="javascript/index.js"></script>
   <!-- <script type="text/javascript" src="json/haga_121021.json"></script> -->
   <!-- <script type="application/json" src="json/haga_121021.json"></script> -->
