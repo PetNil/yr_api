@@ -67,7 +67,7 @@
      
         <div>
             <label for="prognosTime">Välj tid för prognos</label>
-            <select id="prognosTime">
+            <select id="prognosTime" onchange = "getSelectValue();">
                 <option value="0">Nu</option>
                 <option value="1">En timma</option>
                 <option value="2">Två timmar</option>
@@ -176,7 +176,7 @@
           </div>
         </div>
         <div><a href="index.html">Till vanliga tabellen</a></div>
-        <div><a href="test2.html">Till test2tabellen</a></div>
+        <div><a href="test.html">Till test tabellen</a></div>
         <div><a href="test3.html">Till test 3 tabellen</a></div>
       </div>
       <footer>Väderdata från yr.no, 2021</footer>
@@ -189,71 +189,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
   <script type="text/javascript">
-
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-    $('#prognosTime').change(function() {
-            let selectedOption = $(this).val();
-            console.log(selectedOption); //verify you have the value
-            $.ajax({
-                  // type: "POST",
-                  // url: "codebehind.aspx/GetListItems",
-                  // data: JSON.stringify({ value: selectionOption }),
-                  contentType: "application/json; charset=utf-8",
-                  dataType: "json"
-                }).success(function (data) {
-                    console.log(data);  //verify the format of the return data
-                    obj = JSON.parse(data.d);
-                    console.log(obj); //verify obj structure
-                });
-    });
+      let pick = 0;
+      window.addEventListener('load', function() {
+    if (localStorage.pick) {
+        var sel = document.querySelector('#prognosTime');
+        sel.value = localStorage.pick;
+    }
 });
+
+function getSelectValue(){
+    var sel = document.querySelector('#prognosTime');
+    localStorage.pick = sel.value;
+    location.reload();
+}
   </script>
+  
+  
   // <!-- <script type="text/javascript" src="json/haga_121021.json"></script> -->
   <!-- <script type="application/json" src="json/haga_121021.json"></script> -->
-  <script>
-    /*
-            var loadFile = function(event) {
-            //var file = document.file("json/haga_121021.json");
-            var file = "json/haga_121021.json";
-            file.src = URL.createObjectURL(event.target.file);
-            };
-
-  var json = "";
-  json = JSON.stringify(loadFile);
-  var parsed_obj = JSON.parse(json);
-  console.log(parsed_obj);  */ // output 'testing'
-    /* let myRequest = new Request('json/haga_121021.json');
-    console.log(myRequest);
-    fetch(myRequest)
-    .then(function(response) {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.blob();
-    })
-    //.then(response => json = response.json());
-    .then(function(response) {
-        json = JSON.stringify(response);
-
-      //let objectURL = URL.createObjectURL(response);
-      //myJSON.src = objectURL;
-
-    });
-    console.log(json); // output 'testing' */
-    // var parsed_obj = JSON.parse(json);
-    // console.log(parsed_obj); // output 'testing'
-  </script>
-
-  <!-- <script>
-      var json = [];
-    fetch('./json/haga_121021.json').then(response => json = response.json());
-    var my_json = JSON.stringify(json);
-    var parsed_obj = JSON.parse(my_json);
-    console.log(parsed_obj); // output 'testing'
-</script> -->
+  
 
 </body>
 
