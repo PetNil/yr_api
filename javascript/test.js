@@ -2667,10 +2667,21 @@
     }
   });
   
-  const norr = '\u{1F869}';
-  const southwest = '\u{1F86F}';
+  const syd = '\u{1F869}';
+  const norr = '\u{1F86B}';
+  const southwest = '\u{1F86D}';
+  const nordost = '\u{1F86F}';
+  // const n = 'img/arrow/n.png';
+
+  // const windDir = (wind) => {
+  //   switch(wind) {
+  //     case "N":
+  //       return 'img/arrow/n.png';
+  //   }
+  // }
 
   document.getElementById("riktning").innerHTML = southwest + " SV";
+  // document.getElementById("riktning").innerHTML = "<img class='img-fluid' src=" + n + " /> " + rikt;
   
   document.getElementById("hTemp2").innerHTML = airTemp[0] + "&#176;";
   document.getElementById("lTemp2").innerHTML = airTemp[1] + "&#176;";
