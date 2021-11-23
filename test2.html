@@ -177,7 +177,6 @@
         </div>
         <div><a href="index.html">Till vanliga tabellen</a></div>
         <div><a href="test.html">Till test tabellen</a></div>
-        <div><a href="test3.html">Till test 3 tabellen</a></div>
       </div>
       <footer>Väderdata från yr.no, 2021</footer>
     </div>
@@ -189,6 +188,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
   <script type="text/javascript">
+/* 
       let pick = 0;
       window.addEventListener('load', function() {
     if (localStorage.pick) {
@@ -202,8 +202,49 @@ function getSelectValue(){
     localStorage.pick = sel.value;
     location.reload();
 }
+ */
   </script>
   
+  <script type="text/javascript">
+/* 
+    var pick_ = getParameter("id");
+  var selectedOption = document.getElementById("prognosTime");
+  selectedOption.options[(pick_ - 1)].setAttribute("selected", "selected");
+  function setSelectValue(key, value) {//We can set a Parameter in our URL like this
+      key = encodeURI(key);
+      value = encodeURI(value);
+      var kvp = document.location.search.substr(1).split('&');
+      var i = kvp.length;
+      var x;
+      while (i--)//
+      {
+          x = kvp[i].split('=');
+          if (x[0] === key)
+          {
+              x[1] = value;
+              kvp[i] = x.join('=');
+              break;
+          }
+      }
+      if (i < 0) {
+          kvp[kvp.length] = [key, value].join('=');
+      }
+      document.location.search = kvp.join('&');
+  }
+  function getParameter(name, url) {//We can then return the URL like this
+      if (!url)
+          url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+      if (!results)
+          return 1;//if no parameters return the first option
+      if (!results[2])
+          return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+   */
+</script>
   
   // <!-- <script type="text/javascript" src="json/haga_121021.json"></script> -->
   <!-- <script type="application/json" src="json/haga_121021.json"></script> -->

@@ -2567,7 +2567,289 @@
       ]
     }
   }
+
+  let sunrise5days = {
+    "meta": {
+      "licenseurl": "https://api.met.no/license_data.html"
+    },
+    "location": {
+      "latitude": "57.6",
+      "time": [
+        {
+          "high_moon": {
+            "desc": "LOCAL DIURNAL MAXIMUM MOON ELEVATION (Max= 56.26559)",
+            "elevation": "56.265588982",
+            "time": "2021-11-21T01:14:15+01:00"
+          },
+          "moonrise": {
+            "time": "2021-11-21T16:31:00+01:00",
+            "desc": "LOCAL DIURNAL MOON RISE"
+          },
+          "moonshadow": {
+            "desc": "LOCAL MOON STATE * SHADOW ANGLES (azi=262.6,ele=72.8)",
+            "elevation": "72.80710954",
+            "azimuth": "262.599391311",
+            "time": "2021-11-21T00:00:00+01:00"
+          },
+          "date": "2021-11-21",
+          "low_moon": {
+            "time": "2021-11-21T13:34:42+01:00",
+            "desc": "LOCAL DIURNAL MINIMUM MOON ELEVATION (Min= -7.91370)",
+            "elevation": "-7.913699782"
+          },
+          "solarmidnight": {
+            "time": "2021-11-21T23:58:35+01:00",
+            "elevation": "-52.518367698",
+            "desc": "LOCAL DIURNAL MINIMUM SOLAR ELEVATION (Min= -52.51837)"
+          },
+          "moonposition": {
+            "time": "2021-11-21T00:00:00+01:00",
+            "range": "401125.129589668",
+            "desc": "LOCAL MOON POSITION Elv: 53.582 deg, Azi: 151.983, Rng: 401125.1 km",
+            "elevation": "53.581524371",
+            "azimuth": "151.983458116",
+            "phase": "54.744376167"
+          },
+          "sunrise": {
+            "time": "2021-11-21T08:10:05+01:00",
+            "desc": "LOCAL DIURNAL SUN RISE"
+          },
+          "sunset": {
+            "desc": "LOCAL DIURNAL SUN SET",
+            "time": "2021-11-21T15:45:56+01:00"
+          },
+          "moonset": {
+            "time": "2021-11-21T10:38:16+01:00",
+            "desc": "LOCAL DIURNAL MOON SET"
+          },
+          "moonphase": {
+            "desc": "LOCAL MOON STATE * MOON PHASE= 54.7 (waning gibbous)",
+            "time": "2021-11-21T00:00:00+01:00",
+            "value": "54.744376167"
+          },
+          "solarnoon": {
+            "elevation": "12.388938004",
+            "desc": "LOCAL DIURNAL MAXIMUM SOLAR ELEVATION (Max= 12.38894)",
+            "time": "2021-11-21T11:58:01+01:00"
+          }
+        },
+        {
+          "solarnoon": {
+            "elevation": "12.174093946",
+            "desc": "LOCAL DIURNAL MAXIMUM SOLAR ELEVATION (Max= 12.17409)",
+            "time": "2021-11-22T11:58:17+01:00"
+          },
+          "moonset": {
+            "time": "2021-11-22T11:43:40+01:00",
+            "desc": "LOCAL DIURNAL MOON SET"
+          },
+          "moonposition": {
+            "time": "2021-11-22T00:00:00+01:00",
+            "range": "401006.456061381",
+            "azimuth": "134.103372437",
+            "desc": "LOCAL MOON POSITION Elv: 51.351 deg, Azi: 134.103, Rng: 401006.5 km",
+            "elevation": "51.351163292",
+            "phase": "57.733236469"
+          },
+          "sunrise": {
+            "time": "2021-11-22T08:12:10+01:00",
+            "desc": "LOCAL DIURNAL SUN RISE"
+          },
+          "sunset": {
+            "desc": "LOCAL DIURNAL SUN SET",
+            "time": "2021-11-22T15:44:22+01:00"
+          },
+          "moonrise": {
+            "time": "2021-11-22T17:09:13+01:00",
+            "desc": "LOCAL DIURNAL MOON RISE"
+          },
+          "high_moon": {
+            "time": "2021-11-22T02:02:44+01:00",
+            "elevation": "58.019828009",
+            "desc": "LOCAL DIURNAL MAXIMUM MOON ELEVATION (Max= 58.01983)"
+          },
+          "date": "2021-11-22",
+          "solarmidnight": {
+            "time": "2021-11-22T23:58:51+01:00",
+            "elevation": "-52.730127311",
+            "desc": "LOCAL DIURNAL MINIMUM SOLAR ELEVATION (Min= -52.73013)"
+          },
+          "low_moon": {
+            "desc": "LOCAL DIURNAL MINIMUM MOON ELEVATION (Min= -6.79624)",
+            "elevation": "-6.796240237",
+            "time": "2021-11-22T14:26:27+01:00"
+          }
+        },
+        {
+          "solarnoon": {
+            "elevation": "11.965420157",
+            "desc": "LOCAL DIURNAL MAXIMUM SOLAR ELEVATION (Max= 11.96542)",
+            "time": "2021-11-23T11:58:34+01:00"
+          },
+          "moonset": {
+            "time": "2021-11-23T12:34:05+01:00",
+            "desc": "LOCAL DIURNAL MOON SET"
+          },
+          "sunset": {
+            "desc": "LOCAL DIURNAL SUN SET",
+            "time": "2021-11-23T15:42:52+01:00"
+          },
+          "sunrise": {
+            "time": "2021-11-23T08:14:14+01:00",
+            "desc": "LOCAL DIURNAL SUN RISE"
+          },
+          "moonposition": {
+            "azimuth": "118.811882231",
+            "desc": "LOCAL MOON POSITION Elv: 46.559 deg, Azi: 118.812, Rng: 400293.9 km",
+            "elevation": "46.558850286",
+            "phase": "60.733319204",
+            "time": "2021-11-23T00:00:00+01:00",
+            "range": "400293.941293699"
+          },
+          "solarmidnight": {
+            "time": "2021-11-23T23:59:07+01:00",
+            "desc": "LOCAL DIURNAL MINIMUM SOLAR ELEVATION (Min= -52.93567)",
+            "elevation": "-52.935669419"
+          },
+          "low_moon": {
+            "time": "2021-11-23T15:19:00+01:00",
+            "elevation": "-6.963243602",
+            "desc": "LOCAL DIURNAL MINIMUM MOON ELEVATION (Min= -6.96324)"
+          },
+          "date": "2021-11-23",
+          "high_moon": {
+            "desc": "LOCAL DIURNAL MAXIMUM MOON ELEVATION (Max= 58.50958)",
+            "elevation": "58.509577994",
+            "time": "2021-11-23T02:52:21+01:00"
+          },
+          "moonrise": {
+            "time": "2021-11-23T18:03:57+01:00",
+            "desc": "LOCAL DIURNAL MOON RISE"
+          }
+        },
+        {
+          "moonset": {
+            "time": "2021-11-24T13:08:51+01:00",
+            "desc": "LOCAL DIURNAL MOON SET"
+          },
+          "solarnoon": {
+            "elevation": "11.763011588",
+            "desc": "LOCAL DIURNAL MAXIMUM SOLAR ELEVATION (Max= 11.76301)",
+            "time": "2021-11-24T11:58:52+01:00"
+          },
+          "high_moon": {
+            "elevation": "57.681823225",
+            "desc": "LOCAL DIURNAL MAXIMUM MOON ELEVATION (Max= 57.68182)",
+            "time": "2021-11-24T03:42:08+01:00"
+          },
+          "moonrise": {
+            "desc": "LOCAL DIURNAL MOON RISE",
+            "time": "2021-11-24T19:13:36+01:00"
+          },
+          "date": "2021-11-24",
+          "low_moon": {
+            "elevation": "-8.42628349",
+            "desc": "LOCAL DIURNAL MINIMUM MOON ELEVATION (Min= -8.42628)",
+            "time": "2021-11-24T16:11:09+01:00"
+          },
+          "solarmidnight": {
+            "time": "2021-11-24T23:59:24+01:00",
+            "elevation": "-53.134899375",
+            "desc": "LOCAL DIURNAL MINIMUM SOLAR ELEVATION (Min= -53.13490)"
+          },
+          "moonposition": {
+            "azimuth": "106.49133072",
+            "desc": "LOCAL MOON POSITION Elv: 39.909 deg, Azi: 106.491, Rng: 398885.3 km",
+            "elevation": "39.908639051",
+            "phase": "63.758226515",
+            "time": "2021-11-24T00:00:00+01:00",
+            "range": "398885.346335188"
+          },
+          "sunrise": {
+            "desc": "LOCAL DIURNAL SUN RISE",
+            "time": "2021-11-24T08:16:16+01:00"
+          },
+          "sunset": {
+            "desc": "LOCAL DIURNAL SUN SET",
+            "time": "2021-11-24T15:41:25+01:00"
+          }
+        },
+        {
+          "moonset": {
+            "desc": "LOCAL DIURNAL MOON SET",
+            "time": "2021-11-25T13:31:42+01:00"
+          },
+          "solarnoon": {
+            "time": "2021-11-25T11:59:10+01:00",
+            "desc": "LOCAL DIURNAL MAXIMUM SOLAR ELEVATION (Max= 11.56696)",
+            "elevation": "11.566962548"
+          },
+          "date": "2021-11-25",
+          "solarmidnight": {
+            "desc": "LOCAL DIURNAL MINIMUM SOLAR ELEVATION (Min= -53.32772)",
+            "elevation": "-53.327723279",
+            "time": "2021-11-25T23:59:42+01:00"
+          },
+          "low_moon": {
+            "elevation": "-11.119568938",
+            "desc": "LOCAL DIURNAL MINIMUM MOON ELEVATION (Min= -11.11957)",
+            "time": "2021-11-25T17:01:59+01:00"
+          },
+          "moonrise": {
+            "desc": "LOCAL DIURNAL MOON RISE",
+            "time": "2021-11-25T20:32:46+01:00"
+          },
+          "high_moon": {
+            "time": "2021-11-25T04:31:10+01:00",
+            "elevation": "55.564870096",
+            "desc": "LOCAL DIURNAL MAXIMUM MOON ELEVATION (Max= 55.56487)"
+          },
+          "sunrise": {
+            "desc": "LOCAL DIURNAL SUN RISE",
+            "time": "2021-11-25T08:18:17+01:00"
+          },
+          "sunset": {
+            "desc": "LOCAL DIURNAL SUN SET",
+            "time": "2021-11-25T15:40:01+01:00"
+          },
+          "moonposition": {
+            "phase": "66.823311792",
+            "azimuth": "96.588625154",
+            "desc": "LOCAL MOON POSITION Elv: 31.989 deg, Azi: 96.589, Rng: 396696.2 km",
+            "elevation": "31.988931151",
+            "range": "396696.202297767",
+            "time": "2021-11-25T00:00:00+01:00"
+          }
+        },
+        {
+          "moonposition": {
+            "phase": "69.945525637",
+            "elevation": "23.18347595",
+            "desc": "LOCAL MOON POSITION Elv: 23.183 deg, Azi: 88.366, Rng: 393685.6 km",
+            "azimuth": "88.365738038",
+            "range": "393685.598086352",
+            "time": "2021-11-26T00:00:00+01:00"
+          },
+          "date": "2021-11-26"
+        }
+      ],
+      "height": "0",
+      "longitude": "11.9"
+    }
+  }
+
+  const sunDate = sunrise5days.location.time[0].sunrise.time.slice(0, 10);
+  const sunrise = sunrise5days.location.time[0].sunrise.time;
+  const sunset = sunrise5days.location.time[0].sunset.time;
+
+  const sunriseTime = sunrise.slice(11, 16);
+  const sunsetTime = sunset.slice(11, 16);
+  const sunriseImg = "img/sun/sunrise_morning.png";
+  const sunsetImg = "img/sun/sunset_evening.png";
   
+  console.log(sunrise);
+  console.log(sunset);
+
   const geometry = weatherData4.geometry;
   const meta = weatherData4.properties.meta;
   const data = weatherData4.properties.timeseries;
@@ -2577,7 +2859,7 @@
   
   var weatherSize = Object.keys(data).length;
   
-  console.log(weatherSize);  // ger antalet tidsserier
+  // console.log(weatherSize);  // ger antalet tidsserier
   
   // För att ta fram högsta och lägsta temperatur kommande 24 timmar
   let airTemps = [];
@@ -2613,7 +2895,7 @@
 //   const weatherNow = data[selectedHour].data.instant.details;
   const weather1H = data[1].data.instant.details;
   
-  console.log(weatherNow);
+  // console.log(weatherNow);
   // console.log(weather1H);
   
   const lat = geometry.coordinates[1];
@@ -2655,6 +2937,12 @@
   document.getElementById("datum").innerHTML = thisDate;
   document.getElementById("tid").innerHTML = thisTime;
   
+  document.getElementById("solDatum").innerHTML = sunDate;
+  document.getElementById("solUpp").innerHTML = sunriseTime;
+  document.getElementById("solUppImg").innerHTML = "<img class='img-fluid' src=" +sunriseImg + " />";
+  document.getElementById("solNer").innerHTML = sunsetTime;
+  document.getElementById("solNerImg").innerHTML = "<img class='img-fluid' src=" +sunsetImg + " />";
+
   // Test
   // Använder sig av key som id och placerar alla värden på rätt ställe
   // med en loop istället. För temp läggs grad-tecknet till
