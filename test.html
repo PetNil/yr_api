@@ -31,6 +31,25 @@
   <!-- your content here... -->
   <div id="container">
     <div id="" class="container-fluid">
+      <aside>
+        <div class="row">
+          <div class="col col-xs-4">
+            <h4>Datum</h4>
+            <p id="solDatum"></p>
+            <div></div>
+          </div>
+          <div class="col col-xs-4">
+            <h4>Solen går upp</h4>
+            <p id="solUpp"></p>
+            <div id="solUppImg"></div>
+          </div>
+          <div class="col col-xs-4">
+            <h4>Solen går ner</h4>
+            <p id="solNer"></p>
+            <div id="solNerImg"></div>
+          </div>
+        </div>
+      </aside>
       <h1>Vädersidan</h1>
       <div id="meta">
         <div class="row">
@@ -65,94 +84,94 @@
         <div class="col col-xs-4"></div>
       </div>
      
-        <div>
-            <label for="prognosTime">Välj tid för prognos</label>
-            <select id="prognosTime">
-                <option value="0">Nu</option>
-                <option value="1">En timma</option>
-                <option value="2">Två timmar</option>
-                <option value="3">Tre timmar</option>
-            </select>
-            <button id="btn" class="btn btn-info btn-sm">Välj</button>
-            </div> 
-            <div class="row">
-                <div class="col col-xs-4">Tid för prognos: </div>
-                <div class="col col-xs-2" id="tid"></div>
-                <div class="col col-xs-6"></div>
-            </div>
-        </div>
+      <div>
+          <label for="prognosTime">Välj tid för prognos</label>
+          <select id="prognosTime">
+              <option value="0">Nu</option>
+              <option value="1">En timma</option>
+              <option value="2">Två timmar</option>
+              <option value="3">Tre timmar</option>
+          </select>
+          <button id="btn" class="btn btn-info btn-sm">Välj</button>
+          </div> 
+          <div class="row">
+              <div class="col col-xs-4">Tid för prognos: </div>
+              <div class="col col-xs-2" id="tid"></div>
+              <div class="col col-xs-6"></div>
+          </div>
+      </div>
       
-        <!-- Testtabell -->
-        <div>
-          <h4>Nytt sätt att lägga in värden</h4>
-          <table class="table caption-top">
-            <caption>Väderdata</caption>
-            <tr>
-              <th>Typ</th>
-              <th>Engelsk</th>
-              <th>Data</th>
-              <th>Enhet</th>
-              <th>Info</th>
-            </tr>
-            <tr>
-              <td>Lufttryck</td>
-              <td></td>
-              <td id="air_pressure_at_sea_level"></td>
-              <td>hPa</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Temperatur</td>
-              <td></td>
-              <td id="air_temperature" class="align-right"></td>
-              <td>celsius</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Nederbörd</td>
-              <td></td>
-              <td id="precipitation_amount"></td>
-              <td>mm</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Luftfuktighet</td>
-              <td></td>
-              <td id="relative_humidity"></td>
-              <td>%</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Vindriktning</td>
-              <td></td>
-              <td id="wind_from_direction"></td>
-              <td>grader</td>
-              <td id="riktning"></td>
-            </tr>
-            <tr>
-              <td>Vind</td>
-              <td></td>
-              <td id="wind_speed" class="float-right"></td>
-              <td>m/s</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Högsta temp</td>
-              <td></td>
-              <td id="hTemp2"></td>
-              <td>celsius</td>
-              <td>kommande 24 timmar</td>
-            </tr>
-            <tr>
-              <td>Lägsta temp</td>
-              <td></td>
-              <td id="lTemp2"></td>
-              <td>celsius</td>
-              <td>kommande 24 timmar</td>
-            </tr>
+      <!-- Testtabell -->
+      <div>
+        <h4>Nytt sätt att lägga in värden</h4>
+        <table class="table caption-top">
+          <caption>Väderdata</caption>
+          <tr>
+            <th>Typ</th>
+            <th>Engelsk</th>
+            <th>Data</th>
+            <th>Enhet</th>
+            <th>Info</th>
+          </tr>
+          <tr>
+            <td>Lufttryck</td>
+            <td></td>
+            <td id="air_pressure_at_sea_level"></td>
+            <td>hPa</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Temperatur</td>
+            <td></td>
+            <td id="air_temperature" class="align-right"></td>
+            <td>celsius</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Nederbörd</td>
+            <td></td>
+            <td id="precipitation_amount"></td>
+            <td>mm</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Luftfuktighet</td>
+            <td></td>
+            <td id="relative_humidity"></td>
+            <td>%</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Vindriktning</td>
+            <td></td>
+            <td id="wind_from_direction"></td>
+            <td>grader</td>
+            <td id="riktning"></td>
+          </tr>
+          <tr>
+            <td>Vind</td>
+            <td></td>
+            <td id="wind_speed" class="float-right"></td>
+            <td>m/s</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Högsta temp</td>
+            <td></td>
+            <td id="hTemp2"></td>
+            <td>celsius</td>
+            <td>kommande 24 timmar</td>
+          </tr>
+          <tr>
+            <td>Lägsta temp</td>
+            <td></td>
+            <td id="lTemp2"></td>
+            <td>celsius</td>
+            <td>kommande 24 timmar</td>
+          </tr>
 
-          </table>
-        </div>
+        </table>
+      </div>
    
         <div class="row">
           <h3>Väderutsikter</h3>
@@ -177,7 +196,6 @@
         </div>
         <div><a href="index.html">Till vanliga tabellen</a></div>
         <div><a href="test2.html">Till test2tabellen</a></div>
-        <div><a href="test3.html">Till test 3 tabellen</a></div>
       </div>
       <footer>Väderdata från yr.no, 2021</footer>
     </div>
@@ -211,8 +229,7 @@
     });
 });
   </script>
-  // <!-- <script type="text/javascript" src="json/haga_121021.json"></script> -->
-  <!-- <script type="application/json" src="json/haga_121021.json"></script> -->
+
   <script>
     /*
             var loadFile = function(event) {
