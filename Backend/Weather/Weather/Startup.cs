@@ -32,14 +32,21 @@ namespace Weather
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Weather", Version = "v1" });
             });
-            services.AddCors(c =>
+            services.AddCors(options =>
             {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                options.AddPolicy("MyPolicy",
+                builder =>
+                {
+                    builder.WithOrigins("https://localhost:44336/")
+                    .SetIsOriginAllowedToAllowWildcardSubdomains()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .SetIsOriginAllowed(_ => true)
+                    .AllowCredentials().Build();
+                });
             });
-            //services.AddHttpClient();
             services.AddHttpClient("API Client", client =>
             {
-                //client.BaseAddress = new Uri("https://api.met.no");
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
             });
         }
@@ -57,12 +64,12 @@ namespace Weather
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors(options => options.AllowAnyOrigin());
+            app.UseCors("MyPolicy");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllers().RequireCors("MyPolicy");
             });
         }
     }
