@@ -2883,16 +2883,47 @@
   weatherNow = data[selectedHour].data.instant.details;
   
   const btn = document.querySelector('#btn');
-    const sb = document.querySelector('#prognosTime')
-    btn.onclick = (event) => {
-        event.preventDefault();
-        // show the selected index
-        selectedHour = sb.selectedIndex;
-        console.log(selectedHour);
-        weatherNow = data[selectedHour].data.instant.details;
-    };
+    const sb = document.querySelector('#prognosTime');
 
-//   const weatherNow = data[selectedHour].data.instant.details;
+    sb.onchange = handleChange;
+
+    function handleChange(e) {
+      selectedHour = e.target.value;
+      weatherNow = data[selectedHour].data.instant.details;
+      console.log(selectedHour);
+      console.log(weatherNow);
+      const prognosTime = data[selectedHour].time;
+      const thisDate = prognosTime.slice(0, 10);
+      const thisTime = prognosTime.slice(11, 16);
+      document.getElementById("datum").innerHTML = thisDate;
+      document.getElementById("tid").innerHTML = thisTime;
+      const weatherArray = Object.entries(weatherNow);
+      const prognos = weatherArray.filter(w => !w.includes("cloud_area_fraction"));
+      const prognosValues = prognos.forEach((key, index) => {
+        // console.log(key[0], key[1], index);
+        if(key[0] === 'air_temperature') {
+          document.getElementById(key[0]).innerHTML = key[1] + "&#176;";
+        } else {
+          document.getElementById(key[0]).innerHTML = key[1];
+        }
+      });
+    }
+
+    // btn.onclick = (event) => {
+    //     event.preventDefault();
+    //     // show the selected index
+    //     selectedHour = sb.selectedIndex;
+    //     console.log(selectedHour);
+    //     document.onchange(this.sb => {
+    //       weatherNow = data[selectedHour].data.instant.details;
+    //     })
+    //     // weatherNow = data[selectedHour].data.instant.details;
+    // };
+
+    
+
+
+  // const weatherNow = data[selectedHour].data.instant.details;
   const weather1H = data[1].data.instant.details;
   
   // console.log(weatherNow);
@@ -2904,9 +2935,9 @@
   
   const updated = meta.updated_at;
   
-  const prognosTime = data[selectedHour].time;
+  // const prognosTime = data[selectedHour].time;
   
-  const weatherArray = Object.entries(weatherNow);
+  // const weatherArray = Object.entries(weatherNow);
   // Testar om det regnar
   // const doesItRain = weatherArray.find(key => key[0] === 'precipitation_amount');
   // // Sätter regn till 0
@@ -2921,12 +2952,12 @@
   //   }
   
   // Tar bort molnighet som vi inte använder just nu
-  const prognos = weatherArray.filter(w => !w.includes("cloud_area_fraction"));
+  // const prognos = weatherArray.filter(w => !w.includes("cloud_area_fraction"));
   
   // console.log(prognos); 
   
-  const thisDate = prognosTime.slice(0, 10);
-  const thisTime = prognosTime.slice(11, 16);
+  // const thisDate = prognosTime.slice(0, 10);
+  // const thisTime = prognosTime.slice(11, 16);
   
   document.getElementById("lat").innerHTML = lat;
   document.getElementById("long").innerHTML = long;
@@ -2934,26 +2965,26 @@
   
   document.getElementById("updated").innerHTML = updated;
   
-  document.getElementById("datum").innerHTML = thisDate;
-  document.getElementById("tid").innerHTML = thisTime;
+  // document.getElementById("datum").innerHTML = thisDate;
+  // document.getElementById("tid").innerHTML = thisTime;
   
-  document.getElementById("solDatum").innerHTML = sunDate;
-  document.getElementById("solUpp").innerHTML = sunriseTime;
-  document.getElementById("solUppImg").innerHTML = "<img class='img-fluid' src=" +sunriseImg + " />";
-  document.getElementById("solNer").innerHTML = sunsetTime;
-  document.getElementById("solNerImg").innerHTML = "<img class='img-fluid' src=" +sunsetImg + " />";
+  // document.getElementById("solDatum").innerHTML = sunDate;
+  // document.getElementById("solUpp").innerHTML = sunriseTime;
+  // document.getElementById("solUppImg").innerHTML = "<img class='img-fluid' src=" +sunriseImg + " />";
+  // document.getElementById("solNer").innerHTML = sunsetTime;
+  // document.getElementById("solNerImg").innerHTML = "<img class='img-fluid' src=" +sunsetImg + " />";
 
   // Test
   // Använder sig av key som id och placerar alla värden på rätt ställe
   // med en loop istället. För temp läggs grad-tecknet till
-  const prognosValues = prognos.forEach((key, index) => {
-    // console.log(key[0], key[1], index);
-    if(key[0] === 'air_temperature') {
-      document.getElementById(key[0]).innerHTML = key[1] + "&#176;";
-    } else {
-      document.getElementById(key[0]).innerHTML = key[1];
-    }
-  });
+  // const prognosValues = prognos.forEach((key, index) => {
+  //   // console.log(key[0], key[1], index);
+  //   if(key[0] === 'air_temperature') {
+  //     document.getElementById(key[0]).innerHTML = key[1] + "&#176;";
+  //   } else {
+  //     document.getElementById(key[0]).innerHTML = key[1];
+  //   }
+  // });
   
   const syd = '\u{1F869}';
   const norr = '\u{1F86B}';
