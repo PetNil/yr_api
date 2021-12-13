@@ -22,23 +22,23 @@ namespace Weather.Controllers
             _clientFactory = clientFactory;
         }
 
-        [HttpGet]
-        [EnableCors("AllowOrigin")]
-        public async Task<IActionResult> GetWeather()
+        [HttpPost]
+        [EnableCors("MyPolicy")]
+        public async Task<IActionResult> GetWeather([FromBody] Coordinates coords)
         {
-            double longitude = 11.9659;
-            double latitude = 57.6984;
+            string longitude = coords.Longitude.ToString().Replace(',', '.');
+            string latitude = coords.Latitude.ToString().Replace(',', '.');
             HttpClient client = _clientFactory.CreateClient("API Client");
             client.DefaultRequestHeaders.Add(HeaderNames.UserAgent, "WeatherData");
 
-            var response = await client.GetAsync("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=" + latitude + "&lon=" + longitude);
+            var response = await client.GetAsync($"https://api.met.no/weatherapi/locationforecast/2.0/compact?lat={latitude}&lon={longitude}");
             response.EnsureSuccessStatusCode();
             var responseBody = response.Content.ReadAsStreamAsync();
             if (response.IsSuccessStatusCode)
             {
-                var repositories = await JsonSerializer.DeserializeAsync<Root>(await responseBody);
+                var data = await JsonSerializer.DeserializeAsync<Root>(await responseBody);
 
-                return Ok(repositories);
+                return Ok(data);
             }
 
             return null;
